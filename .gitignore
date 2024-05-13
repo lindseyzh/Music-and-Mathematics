@@ -1,0 +1,10 @@
+# for IDEA
+.idea
+
+# for VSCode
+.vscode
+
+# for Mac
+.DS_Store
+
+*/__pycache__
