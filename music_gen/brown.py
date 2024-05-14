@@ -6,7 +6,7 @@ pitch_bias_dict = {
     -3: 0.1,
     -2: 0.2,
     -1: 0.2,
-    0: 0.2,
+    0: 0.1,
     1: 0.2,
     2: 0.2,
     3: 0.1,
@@ -37,6 +37,7 @@ class BrownNoise:
 
         # We check the range of the pitch, but we don't prevent
         # the pitch from going out of the range.
+        # For the out-of-range seldom occurs.
         assert (1 <= group <= 7) or \
                (group == 8 and index <= 0) or \
                (group == 0 and index >= 9)
@@ -51,16 +52,15 @@ class BrownNoise:
         return next_pitch
 
     def next_duration(self) -> float:
-        # cur_duration = self.cur_duration
-        # if cur_duration == 0.25:
-        #     next_duration = cur_duration * 2 ** choice([0, 1])
-        # elif cur_duration == 4.0:
-        #     next_duration = cur_duration * 2 ** rand({-1: 0.8, 0: 0.2}, 0.1)
-        # else:
-        #     next_duration = cur_duration * 2 ** choice([-1, 0, 1])
-        # self.cur_duration = next_duration
-        # return next_duration
-        return 0.5
+        cur_duration = self.cur_duration
+        if cur_duration == 0.25:
+            next_duration = cur_duration * 2 ** choice([0, 1])
+        elif cur_duration == 2.0:
+            next_duration = cur_duration * 2 ** choice([-1, 0])
+        else:
+            next_duration = cur_duration * 2 ** choice([-1, 0, 1])
+        self.cur_duration = next_duration
+        return next_duration
 
     def next(self) -> note.Note:
         res = note.Note(self.next_pitch())
