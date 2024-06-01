@@ -2,7 +2,9 @@
 
 北京大学音乐与数学课程大作业(2024春)
 
-关于如何查看生成的音乐, 可以参考 https://web.mit.edu/music21/doc/usersGuide/usersGuide_08_installingMusicXML.html.
+代码在music-gen文件夹中，生成的音乐在music文件夹中。报告源文件在report-src文件夹中。
+
+关于如何查看生成的音乐乐谱, 可以参考 https://web.mit.edu/music21/doc/usersGuide/usersGuide_08_installingMusicXML.html.
 
 ### 关于环境配置
 
