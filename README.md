@@ -2,10 +2,10 @@
 
 北京大学音乐与数学课程大作业(2024春)
 
-代码在music_gen文件夹中，生成的音乐在music文件夹中，编曲在music_composed文件夹中。
-报告的Latex源文件在report_src文件夹中。
+代码在music_gen文件夹中, 生成的音乐在music文件夹中, 编曲在music_composed文件夹中.
+报告的Latex源文件在report_src文件夹中.
 
-关于如何查看生成的音乐乐谱, 可以参考 https://web.mit.edu/music21/doc/usersGuide/usersGuide_08_installingMusicXML.html.
+关于如何查看生成的音乐乐谱, 可以参考 [这个链接](https://web.mit.edu/music21/doc/usersGuide/usersGuide_08_installingMusicXML.html).
 
 ### 关于环境配置
 
